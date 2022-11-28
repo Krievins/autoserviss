@@ -9,12 +9,12 @@
 </head>
 <body>
     {{-- <a class="link" href="{{ url('/login') }}">Login</a> --}}
-    <div class="main">
-        <div class="main__nav">
-            <div class="main__nav__box">
-                <a href="{{url('/')}}" class="main__nav__box--logo">Autool</a>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav__box">
+                <a href="{{url('/')}}" class="header__nav__box--logo">Autool</a>
                 @guest
-                    <a href="{{ url('/login') }}" class="main__nav__box--login">Login</a>
+                    <a href="{{ url('/login') }}" class="header__nav__box--login">Login</a>
                 @endguest
                 @auth
                     <span>Welcome, {{ auth()->user()->name }}!</span>
@@ -23,7 +23,7 @@
                     </form>
                 @endauth
             </div>
-        </div>
+        </nav>
     </header>
     <main></main>
 </body>
