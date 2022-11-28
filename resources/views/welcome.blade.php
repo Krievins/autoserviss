@@ -13,6 +13,15 @@
         <div class="main__nav">
             <div class="main__nav__box">
                 <a href="{{url('/')}}" class="main__nav__box--logo">Autool</a>
+                @guest
+                    <a href="{{ url('/login') }}" class="main__nav__box--login">Login</a>
+                @endguest
+                @auth
+                    <span>Welcome, {{ auth()->user()->name }}!</span>
+                    <form action="POST" action="/logout">
+                        <button type="submit">Logout</button>
+                    </form>
+                @endauth
             </div>
         </div>
     </div>
