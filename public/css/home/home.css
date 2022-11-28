@@ -48,3 +48,28 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #EFF7F6;
+  font-family: "Poppins", sans-serif;
+}
+.main__nav {
+  height: 70px;
+  width: 100%;
+  background-color: #2D3047;
+}
+.main__nav__box {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.main__nav__box--logo {
+  text-decoration: none;
+  color: #EFF7F6;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+}

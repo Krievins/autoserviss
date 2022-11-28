@@ -1,0 +1,39 @@
+@import '../variables.scss';
+@import '../reset.scss';
+
+.main {
+
+    min-height: 100vh;
+    width: 100%;
+    background-color: $min-cream;
+    font-family: $font-main;
+
+    &__nav {
+
+        height: 70px;
+        width: 100%;
+        background-color: $space-cadet;
+
+        &__box {
+
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+
+            &--logo {
+
+                text-decoration: none;
+                color: $min-cream;
+                font-size: 25px;
+                letter-spacing: 0.5px;
+
+            }
+
+        }
+
+
+    }
+
+}
