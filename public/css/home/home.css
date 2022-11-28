@@ -66,6 +66,7 @@ table {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .main__nav__box--logo {
   text-decoration: none;

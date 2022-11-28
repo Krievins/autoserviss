@@ -26,7 +26,11 @@ class RegisterController extends Controller
             'email' => ['required', 'email', 'max:255', 'min:7']
         ]);
 
-        User::create($attributes);
+        $user = User::create($attributes);
+
+        // Log the user in
+
+        auth()->login($user);
 
         return redirect('/');
     }
