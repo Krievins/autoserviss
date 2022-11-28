@@ -49,18 +49,18 @@ table {
   border-spacing: 0;
 }
 
-.main {
+.header {
   min-height: 100vh;
   width: 100%;
   background-color: #EFF7F6;
   font-family: "Poppins", sans-serif;
 }
-.main__nav {
+.header__nav {
   height: 70px;
   width: 100%;
   background-color: #2D3047;
 }
-.main__nav__box {
+.header__nav__box {
   width: 90%;
   height: 100%;
   margin: 0 auto;
@@ -68,9 +68,14 @@ table {
   align-items: center;
   justify-content: space-between;
 }
-.main__nav__box--logo {
+.header__nav__box--logo {
   text-decoration: none;
   color: #EFF7F6;
   font-size: 25px;
   letter-spacing: 0.5px;
+}
+.header__nav__box--login {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
 }
