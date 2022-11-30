@@ -19,6 +19,7 @@
                 @auth
                     <span>Welcome, {{ auth()->user()->name }}!</span>
                     <form action="POST" action="/logout">
+                        @csrf
                         <button type="submit">Logout</button>
                     </form>
                 @endauth
