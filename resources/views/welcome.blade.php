@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ mix('css/home/home.css') }}">
-    <title>Home - Autool</title>
-</head>
-<body>
+@extends('layouts.main', [
+    'stylesheet' => mix('css/home/home.css')
+])
+
+@section('content')
     {{-- <a class="link" href="{{ url('/login') }}">Login</a> --}}
     <header class="header">
         <nav class="header__nav">
@@ -18,7 +13,7 @@
                 @endguest
                 @auth
                     <span>Welcome, {{ auth()->user()->name }}!</span>
-                    <form action="POST" action="/logout">
+                    <form method="POST" action="/logout">
                         @csrf
                         <button type="submit">Logout</button>
                     </form>
@@ -26,6 +21,5 @@
             </div>
         </nav>
     </header>
-    <main></main>
-</body>
-</html>
+@endsection
+    

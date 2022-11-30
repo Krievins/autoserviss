@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
-</head>
-<body>
-    <h1>Register</h1>
-    <form action="/register" method="post">
+@extends('layouts.main', [
+    'stylesheet' => mix('css/home/home.css')
+])
+
+@section('content')
+    <p>Admin</p>
+    <a href="{{ url('admin/create_user') }}">Create User</a>
+    <a href="{{ url('admin/users') }}">Users</a>
+    <h1 style="margin-top: 40px;">Create User</h1>
+    <form action="/admin/create_user" method="post">
         @csrf
         {{-- Name --}}
         <label for="name">Name</label>
@@ -25,5 +24,4 @@
         {{-- Button --}}
         <button type="submit">Submit</button>
     </form>
-</body>
-</html>
+@endsection
