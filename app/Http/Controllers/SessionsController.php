@@ -7,9 +7,10 @@ use Illuminate\Support\Facades\Auth;
 
 class SessionsController extends Controller
 {
+    
     public function create () {
 
-        return view('sessions.create');
+        return view('sessions.login');
 
     }
 
@@ -28,7 +29,7 @@ class SessionsController extends Controller
 
         if(auth()->attempt($attributes)){
             
-            return redirect('/')->with('Seuccess');
+            return redirect('/worker')->with('Success');
 
         }
 
@@ -43,6 +44,22 @@ class SessionsController extends Controller
         auth()->logout();
 
         return redirect('/');
+
+    }
+
+    public function admin () {
+
+        return view('admin.admin');
+
+    }
+
+    public function worker () {
+
+        if (auth()->user()->role_id == 1) {
+            return view('admin.admin');
+        } 
+
+        return view('worker.worker');
 
     }
 }

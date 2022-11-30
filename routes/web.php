@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RegisterController;
 use Illuminate\Contracts\Session\Session;
 use App\Http\Controllers\SessionsController;
+use App\Http\Middleware\AdminsOnly;
+
 
 
 /*
@@ -26,10 +29,19 @@ Route::get('/', function () {
 //     return view('login');
 // });
 
-Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
-Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
+// Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
+// Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
 
 Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
 Route::post('login', [SessionsController::class, 'store']);
-
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
+
+// Admin
+Route::get('admin', [SessionsController::class, 'admin'])->middleware('admin');
+// For Users Sections
+Route::get('admin/create_user', [AdminController::class, 'create'])->middleware('admin');
+Route::post('admin/create_user', [AdminController::class, 'store'])->middleware('admin');
+Route::get('admin/users', [AdminController::class, 'showUsers'])->middleware('admin');
+
+// Worker
+Route::get('worker', [SessionsController::class, 'worker'])->middleware('auth');
