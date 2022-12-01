@@ -1,11 +1,8 @@
-@extends('layouts.main', [
+@extends('layouts.admin', [
     'stylesheet' => mix('css/home/home.css')
 ])
 
 @section('content')
-    <p>Admin</p>
-    <a href="{{ url('admin/create_user') }}">Create User</a>
-    <a href="{{ url('admin/users') }}">Users</a>
     <h1 style="margin-top: 40px;">Create User</h1>
     <form action="/admin/create_user" method="post">
         @csrf

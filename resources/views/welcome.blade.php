@@ -7,7 +7,7 @@
     <header class="header">
         <nav class="header__nav">
             <div class="header__nav__box">
-                <a href="{{url('/')}}" class="header__nav__box--logo">Autool</a>
+                <a href="{{url('/')}}" class="header__nav__box--logo">Eldo4</a>
                 @guest
                     <a href="{{ url('/login') }}" class="header__nav__box--login">Login</a>
                 @endguest

@@ -1,0 +1,8 @@
+.dashboard {
+  width: 15%;
+  min-height: 90vh;
+  float: left;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+}
