@@ -1,11 +1,8 @@
-@extends('layouts.main', [
+@extends('layouts.admin', [
     'stylesheet' => mix('css/home/home.css'),
     'title' => 'Admin'
 ])
 
 @section('content')
-    <p>Admin</p>
-    <a href="{{ url('admin/create_user') }}">Create User</a>
-    <a href="{{ url('admin/users') }}">Users</a>
-    <a href="{{ url('admin/create_car') }}">Create Car</a>
+    <h1>Admin Panel</h1>
 @endsection

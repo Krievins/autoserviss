@@ -17,8 +17,14 @@ const mix = require('laravel-mix');
 
     mix.sass('resources/sass/app.scss', 'public/css')
         .sass('resources/sass/login.scss', 'public/css')
+        .sass('resources/sass/layout/dashboard.scss', 'public/css')
         .sass('resources/sass/home/home.scss', 'public/css/home');
 
+    // REACT
+
+    // mix.js('resources/js/app.js', 'public/js')
+    // .react()
+    // .sass('resources/sass/app.scss', 'public/css');
 
 
 
