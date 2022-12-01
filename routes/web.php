@@ -7,8 +7,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Contracts\Session\Session;
 use App\Http\Controllers\SessionsController;
 use App\Http\Middleware\AdminsOnly;
-
-
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +45,10 @@ Route::get('admin/users', [AdminController::class, 'showUsers'])->middleware('ad
 Route::get('/admin/create_car', [AdminController::class, 'car_index'])->middleware('admin');
 Route::post('/admin/create_car', [AdminController::class, 'input_car'])->middleware('admin');
 Route::get('admin/cars', [AdminController::class, 'showAllCars'])->middleware('admin');
+// For Profesie Section
+Route::get('admin/create_category', [AdminController::class, 'categoryIndex'])->middleware('admin');
+Route::post('admin/create_category', [AdminController::class, 'categoryCreate'])->middleware('admin');
+Route::get('admin/category', [AdminController::class, 'showCategories'])->middleware('admin');
 
 // Worker
 Route::get('worker', [SessionsController::class, 'worker'])->middleware('auth');

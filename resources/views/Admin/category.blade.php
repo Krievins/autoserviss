@@ -11,17 +11,15 @@
     <table>
         <thead>
             <tr>
-                <th>Vārds</th>
-                <th>Numura Zīme</th>
-                <th>Labojamais</th>
+                <th>ID</th>
+                <th>Amata Nosaukums</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($cars as $car)
+            @foreach ($category as $cat)
                 <tr>
-                    <td>{{ $car['owner_name'] }}</td>
-                    <td>{{ $car['number_plate'] }}</td>
-                    <td>{{ $car['descript'] }}</td>
+                    <td>{{ $cat['id'] }}</td>
+                    <td>{{ $cat['category_name'] }}</td>
                 </tr> 
             @endforeach 
         </tbody>
