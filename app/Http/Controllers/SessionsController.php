@@ -28,6 +28,10 @@ class SessionsController extends Controller
         // dd($attributes);
 
         if(auth()->attempt($attributes)){
+
+            if(auth()->user()->role_id == 1) {
+                return redirect('/admin')->with('Success');
+            } 
             
             return redirect('/worker')->with('Success');
 

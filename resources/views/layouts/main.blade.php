@@ -7,6 +7,9 @@
     @if (isset($stylesheet))
         <link href="{{ $stylesheet }}" rel="stylesheet"/>
     @endif
+    @if (isset($title))
+        <title>{{ $title }}</title>
+    @endif
 </head>
 <body>
     <main>

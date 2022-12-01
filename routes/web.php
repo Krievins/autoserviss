@@ -42,6 +42,10 @@ Route::get('admin', [SessionsController::class, 'admin'])->middleware('admin');
 Route::get('admin/create_user', [AdminController::class, 'create'])->middleware('admin');
 Route::post('admin/create_user', [AdminController::class, 'store'])->middleware('admin');
 Route::get('admin/users', [AdminController::class, 'showUsers'])->middleware('admin');
+// For Car Sections
+Route::get('/admin/create_car', [AdminController::class, 'car_index'])->middleware('admin');
+Route::post('/admin/create_car', [AdminController::class, 'input_car'])->middleware('admin');
+Route::get('admin/cars', [AdminController::class, 'showAllCars'])->middleware('admin');
 
 // Worker
 Route::get('worker', [SessionsController::class, 'worker'])->middleware('auth');
