@@ -22,3 +22,22 @@ export default Example;
 if (document.getElementById('example')) {
     ReactDOM.render(<Example />, document.getElementById('example'));
 }
+
+if (document.getElementById('example')) {
+    // find element by id
+    const element = document.getElementById('example')
+      
+    // create new props object with element's data-attributes
+    // result: {tsId: "1241"}
+    const props = Object.assign({}, element.dataset)
+
+    console.log(props);
+
+    // render element with props (using spread)
+    ReactDOM.render(<Welcome {...props}/>, element);
+}
+
+function Welcome (props) {
+    console.log(JSON.parse(props.tsid)[0].name);
+    return <h1>Hello, {JSON.parse(props.tsid)[0].name}</h1>
+}

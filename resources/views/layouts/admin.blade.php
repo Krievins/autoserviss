@@ -11,8 +11,10 @@
     @if (isset($title))
         <title>{{ $title }}</title>
     @endif
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body>
+    {{-- @dd($users) --}}
     <main>
         <header class="header">
             <nav class="header__nav">
@@ -41,7 +43,9 @@
                 </section>
     
                 @yield('content')
+                <div id="example" data-tsid="{{ $users }}"></div>
         </header>
     </main>
+    
 </body>
 </html>
