@@ -43,3 +43,5 @@ For Creating Files
  - composer require beyondcode/laravel-websockets
 
  - php artisan vendor:publish (Choose Websockets - Important to migrate after)
+
+ - composer require pusher/pusher-php-server
