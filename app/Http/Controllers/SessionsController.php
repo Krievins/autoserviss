@@ -56,7 +56,7 @@ class SessionsController extends Controller
 
         $data = User::all();
 
-        return view('admin.admin', ['users' => $data]);
+        return view('layouts.admin', ['users' => $data]);
 
     }
 

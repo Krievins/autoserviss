@@ -1,10 +1,11 @@
 @extends('layouts.admin', [
     'stylesheet' => mix('css/home/home.css'),
-    'title' => 'Admin - All Cars'
+    'title' => 'Admin - All Cars',
+    'pagename' => 'Mašīnu Saraksts'
 ])
 
 @section('content')
-    <h1 style="margin-top: 40px;">All Cars</h1>
+    <h1 style="margin-top: 40px;">Mašīnu Saraksts</h1>
     <table>
         <thead>
             <tr>

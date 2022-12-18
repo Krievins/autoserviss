@@ -16,8 +16,9 @@ const mix = require('laravel-mix');
     // SASSS
 
     mix.sass('resources/sass/app.scss', 'public/css')
-        .sass('resources/sass/login.scss', 'public/css')
+        .sass('resources/sass/sessions/login.scss', 'public/css/sessions')
         .sass('resources/sass/layout/dashboard.scss', 'public/css')
+        .sass('resources/sass/admin/users.scss', 'public/css/admin')
         .sass('resources/sass/home/home.scss', 'public/css/home');
 
     // REACT

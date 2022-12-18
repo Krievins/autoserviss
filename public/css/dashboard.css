@@ -1,8 +1,166 @@
-.dashboard {
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;900&display=swap);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.admin {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+.admin__dashboard {
   width: 15%;
-  min-height: 90vh;
+  min-height: 100vh;
   float: left;
-  background-color: gray;
+  background-color: #363740;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.admin__dashboard--heading {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #A4A6B3;
+}
+.admin__dashboard--main {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #A4A6B3;
+  width: 100%;
+  line-height: 40px;
+}
+.admin__dashboard--mainlink {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #A4A6B3;
+  width: 100%;
+  line-height: 40px;
+  transition: 400ms ease-in-out;
+}
+.admin__dashboard--mainlink:hover {
+  color: #3F4049;
+}
+.admin__dashboard--link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 50px;
+  letter-spacing: 0.2px;
+  color: #A4A6B3;
+  width: 100%;
+  line-height: 40px;
+  transition: 400ms ease-in-out;
+}
+.admin__dashboard--link:hover {
+  color: #3F4049;
+}
+.admin__dashboard--user {
+  position: absolute;
+  bottom: 50px;
+  align-self: center;
+  color: #A4A6B3;
+}
+.admin__dashboard--logout {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-self: center;
+  color: #83848d;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 400ms ease-in-out;
+}
+.admin__dashboard--logout:hover {
+  color: #A4A6B3;
+}
+.admin__content {
+  width: 85%;
+  height: 100vh;
+  float: right;
+  background-color: #E5E5E5;
+}
+.admin__content__nav {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+}
+.admin__content__nav__box {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 0px 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2px #252733;
+}
+.admin__content__nav__box--name {
+  color: #92949c;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+.admin__content__nav__box--user {
+  display: flex;
+}
+
+.icon {
+  margin-left: 25px;
+  margin-right: 20px;
 }
