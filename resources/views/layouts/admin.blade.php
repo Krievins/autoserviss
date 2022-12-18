@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ mix('css/dashboard.css') }}">
     @if (isset($stylesheet))
@@ -14,38 +15,43 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body>
-    {{-- @dd($users) --}}
     <main>
-        <header class="header">
-            <nav class="header__nav">
-                <div class="header__nav__box">
-                    <a href="{{url('/')}}" class="header__nav__box--logo">Admin</a>
-                    @guest
-                        <a href="{{ url('/login') }}" class="header__nav__box--login">Login</a>
-                    @endguest
-                    @auth
-                        <span>Welcome, {{ auth()->user()->name }}!</span>
-                        <form method="POST" action="/logout">
-                            @csrf
-                            <button type="submit">Logout</button>
-                        </form>
-                    @endauth
-                </div>
-            </nav>
+        <div class="admin">
             {{-- Dashboard --}}
-            <section class="dashboard">
-                <a href="{{ url('admin/create_user') }}">Create User</a>
-                <a href="{{ url('admin/users') }}">Users</a>
-                <a href="{{ url('admin/create_car') }}">Create Car</a>
-                <a href="{{ url('admin/cars') }}">Cars</a>
-                <a href="{{ url('admin/create_category') }}">Create Category</a>
-                <a href="{{ url('admin/category') }}">Categories</a>
-                </section>
-    
+            <div class='admin__dashboard'>
+                {{-- Statistics --}}
+                <h1 class='admin__dashboard--heading'>Admin Panelis</h1>
+                <a class='admin__dashboard--mainlink' href="{{ url('admin') }}"><i class="icon fa fa-pie-chart"></i>Pārskats</a>
+                {{-- Users --}}
+                <h1 class='admin__dashboard--main'><i class="icon fa fa-user"></i>Lietotāji</h1>
+                <a class='admin__dashboard--link' href="{{ url('admin/users') }}">- Lietotāji</a>
+                <a class='admin__dashboard--link' href="{{ url('admin/create_user') }}">- Izveidot Lietotāju</a>
+                {{-- Cars --}}
+                <h1 class='admin__dashboard--main'><i class="icon fa fa-car"></i>Mašīnas</h1>
+                <a class='admin__dashboard--link' href="{{ url('admin/cars') }}">- Mašīnas</a>
+                <a class='admin__dashboard--link' href="{{ url('admin/create_car') }}">- Izveidot Mašīnu</a>
+                {{-- Categories --}}
+                <h1 class='admin__dashboard--main'><i class="icon fa fa-list"></i></i>Profesijas</h1>
+                <a class='admin__dashboard--link' href="{{ url('admin/category') }}">- Amati</a>
+                <a class='admin__dashboard--link' href="{{ url('admin/create_category') }}">-  Izveidot Amatu</a>
+                @auth
+                    <p class="admin__dashboard--user">Welcome, {{ auth()->user()->name }}!</p>
+                    <a class='admin__dashboard--logout' href="{{ url('/logout') }}">Logout</a>  
+                @endauth
+            </div>
+            <div class='admin__content'>
+                {{-- Navigation Bar --}}
+                @if (isset($pagename))
+                    <nav class="admin__content__nav">
+                        <div class="admin__content__nav__box">
+                            <h1 class="admin__content__nav__box--name" >{{ $pagename }}</h1>
+                        </div>
+                    </nav>
+                @endif
+                {{-- Content layouts --}}
                 @yield('content')
-                <div id="example" data-tsid="{{ $users }}"></div>
-        </header>
+            </div>
+        </div>
     </main>
-    
 </body>
 </html>

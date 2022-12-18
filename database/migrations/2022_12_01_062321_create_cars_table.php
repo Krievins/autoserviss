@@ -19,8 +19,11 @@ class CreateCarsTable extends Migration
             $table->string('owner_phone');
             $table->string('number_plate');
             $table->string('release_year');
+            $table->string('brand');
+            $table->string('model');
             $table->integer('user_id')->nullable();
-            $table->integer('category_id');
+            $table->integer('category_id')->nullable();
+            $table->integer('status_id');
             $table->string('descript')->nullable();
             $table->string('filenam')->nullable();
             $table->timestamps();

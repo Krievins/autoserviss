@@ -20,9 +20,11 @@ class Car extends Model
         'owner_phone',
         'number_plate',
         'release_year',
-        'release_year',
+        'brand',
+        'model',
         'user_id',
         'category_id',
+        'status_id',
         'descript',
         'filenam'
     ];

@@ -12,6 +12,10 @@ For live webpack Watch
 
  - npm run watch
 
+## Create model with migration and controller
+
+ - php artisan make:model Model_Name -mcr
+
 ## Laravel Comands
 
 For live Laravel Server

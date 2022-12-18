@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CreatecarController;
+use App\Http\Controllers\CreateuserController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RegisterController;
@@ -33,18 +35,22 @@ Route::get('/', function () {
 
 Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
 Route::post('login', [SessionsController::class, 'store']);
-Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
+Route::get('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
 // Admin
 Route::get('admin', [SessionsController::class, 'admin'])->middleware('admin');
+
 // For Users Sections
-Route::get('admin/create_user', [AdminController::class, 'create'])->middleware('admin');
-Route::post('admin/create_user', [AdminController::class, 'store'])->middleware('admin');
-Route::get('admin/users', [AdminController::class, 'showUsers'])->middleware('admin');
+Route::get('admin/create_user', [CreateuserController::class, 'index'])->middleware('auth');
+Route::post('admin/create_user', [CreateuserController::class, 'insert_user'])->middleware('auth');
+Route::get('admin/users', [CreateuserController::class, 'all_users'])->middleware('auth');
+Route::post('admin/users', [CreateuserController::class, 'send_msg'])->middleware('auth');
+
 // For Car Sections
-Route::get('/admin/create_car', [AdminController::class, 'car_index'])->middleware('admin');
-Route::post('/admin/create_car', [AdminController::class, 'input_car'])->middleware('admin');
-Route::get('admin/cars', [AdminController::class, 'showAllCars'])->middleware('admin');
+Route::get('/admin/create_car', [CreatecarController::class, 'index'])->middleware('admin');
+Route::post('/admin/create_car', [CreatecarController::class, 'create_car'])->middleware('admin');
+Route::get('admin/cars', [CreatecarController::class, 'show_cars'])->middleware('admin');
+
 // For Profesie Section
 Route::get('admin/create_category', [AdminController::class, 'categoryIndex'])->middleware('admin');
 Route::post('admin/create_category', [AdminController::class, 'categoryCreate'])->middleware('admin');
