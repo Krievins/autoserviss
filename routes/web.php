@@ -50,6 +50,8 @@ Route::post('admin/users', [CreateuserController::class, 'send_msg'])->middlewar
 Route::get('/admin/create_car', [CreatecarController::class, 'index'])->middleware('admin');
 Route::post('/admin/create_car', [CreatecarController::class, 'create_car'])->middleware('admin');
 Route::get('admin/cars', [CreatecarController::class, 'show_cars'])->middleware('admin');
+Route::get('admin/get-car-data', [CreatecarController::class, 'get_api_data'])->middleware('admin');
+
 
 // For Profesie Section
 Route::get('admin/create_category', [AdminController::class, 'categoryIndex'])->middleware('admin');
@@ -58,3 +60,8 @@ Route::get('admin/category', [AdminController::class, 'showCategories'])->middle
 
 // Worker
 Route::get('worker', [SessionsController::class, 'worker'])->middleware('auth');
+
+// Route::get('/', function () {
+//     event(new App\Events\NotificationEvent('Someone'));
+//     return "Event has been sent!";
+// });

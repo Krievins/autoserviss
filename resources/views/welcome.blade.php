@@ -8,9 +8,14 @@
         <nav class="header__nav">
             <div class="header__nav__box">
                 <a href="{{url('/')}}" class="header__nav__box--logo">Eldo4</a>
-                @guest
-                    <a href="{{ url('/login') }}" class="header__nav__box--login">Login</a>
-                @endguest
+                <div class="header__nav__box--box">
+                    <a href="{{ url('/login') }}" class="header__nav__box--login">Sākums</a>
+                    <a href="{{ url('/login') }}" class="header__nav__box--login">Par Mums</a>
+                    <a href="{{ url('/login') }}" class="header__nav__box--login">Kontakti</a>
+                    @guest
+                        <a href="{{ url('/login') }}" class="header__nav__box--login">Darbiniekiem</a>
+                    @endguest
+                </div>
                 @auth
                     <span>Welcome, {{ auth()->user()->name }}!</span>
                     <form method="POST" action="/logout">
@@ -21,5 +26,7 @@
             </div>
         </nav>
     </header>
+    <div class="content">
+    </div>
 @endsection
     

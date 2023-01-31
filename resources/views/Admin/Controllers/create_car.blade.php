@@ -18,24 +18,10 @@
         <label for="number_plate">Mašīnas Numura Zīme</label>
         <input type="text" name="number_plate" id="number_plate" required>
         {{-- Release Year --}}
-        <label for="release_year">Izlaiduma Gads</label>
-        <input type="text" name="release_year" id="release_year" required>
-        {{-- Car Brand--}}
-        <label for="model">Mašīnas Marka</label>
-        <input type="text" name="brand" id="brand" required>
-        {{-- Mašīnas Modelis--}}
-        <label for="model">Mašīnas Modelis</label>
-        <input type="text" name="model" id="model" required>
-        {{-- Worker--}}
-        <label for="worker">Problēmas Nodaļa</label>
-        <input type="text" name="worker" id="worker" required>
-        {{-- Description --}}
-        <label for="descript">Darāmais</label>
-        <input type="text" name="descript" id="descript" required>
-        {{-- Description --}}
-        <label for="filenam">Attēls</label>
-        <input type="filenam" name="filenam" id="filenam" required>
-        {{-- Button --}}
+        <label for="release_year">VIN</label>
+        <input type="text" name="vin" id="vin" required>
         <button type="submit">Submit</button>
     </form>
-@endsection
+    <div id="make"></div>
+    <script src="{{ asset('js/ajax_decode.js') }}" defer></script>
+@endsection 

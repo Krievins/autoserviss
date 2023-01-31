@@ -49,3 +49,8 @@ For Creating Files
  - php artisan vendor:publish (Choose Websockets - Important to migrate after)
 
  - composer require pusher/pusher-php-server
+
+
+## To launch websockets server
+
+ - php artisan websockets:serve

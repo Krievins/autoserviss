@@ -50,7 +50,7 @@ table {
 }
 
 .header {
-  min-height: 100vh;
+  height: 70px;
   width: 100%;
   background-color: #EFF7F6;
   font-family: "Poppins", sans-serif;
@@ -78,4 +78,10 @@ table {
   text-decoration: none;
   color: white;
   font-size: 16px;
+  margin-right: 10px;
+}
+
+.content {
+  width: 100%;
+  height: calc(100vh - 70px);
 }
