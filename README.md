@@ -54,3 +54,6 @@ For Creating Files
 ## To launch websockets server
 
  - php artisan websockets:serve
+    
+ - Invite for POSTMAN - https://app.getpostman.com/join-team?invite_code=1ab675a71bd167fae326b1c777da91c7
+
