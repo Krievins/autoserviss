@@ -27,13 +27,7 @@ class CreateuserController extends Controller
     public function insert_user () {
 
         // Create The User
-
-        // return request()->all();
-
-        // $data = request()->all();
-
         
-
         $attributes = request()->validate([
             'name' => ['required', 'max:255'],
             'surname' => ['required', 'max:255'],
@@ -45,12 +39,6 @@ class CreateuserController extends Controller
         ]);
 
         // dd($attributes['name']);
-        
- 
-        // $affected = DB::update(
-        //     'update users set votes = 100 where name = ?',
-        //     ['Anita']
-        // );
 
         $basic  = new \Nexmo\Client\Credentials\Basic(getenv("NEXMO_KEY"), getenv("NEXMO_SECRET"));
         $client = new \Nexmo\Client($basic);
@@ -67,11 +55,10 @@ class CreateuserController extends Controller
             Lai Ražīgs Darbiņš!'
         ]);
 
-        // @dd($attributes);
-
         User::create($attributes);
 
         return redirect('/admin/users');
+
     }
 
     // public function send_msg ()

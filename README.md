@@ -49,5 +49,11 @@ For Creating Files
  - php artisan vendor:publish (Choose Websockets - Important to migrate after)
 
  - composer require pusher/pusher-php-server
+
+
+## To launch websockets server
+
+ - php artisan websockets:serve
     
- Invite for POSTMAN - https://app.getpostman.com/join-team?invite_code=1ab675a71bd167fae326b1c777da91c7
+ - Invite for POSTMAN - https://app.getpostman.com/join-team?invite_code=1ab675a71bd167fae326b1c777da91c7
+

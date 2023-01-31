@@ -38,4 +38,33 @@ class CreatecarController extends Controller
         return view('admin.Controllers.cars', ['cars'=>$data]);
 
     }
+
+    public function get_api_data () {
+
+        $get_vin = $_GET['VIN'];
+
+        $vin = $get_vin; //UU1DJF00970370860
+        $id = "decode";
+
+        $apiKey = "6b9eac7d4ca7";  // Your API key
+        $secretKey = "811f89b542"; // Your secret key
+
+        $apiPrefix = "https://api.vindecoder.eu/3.2";
+
+        $controlSum = substr(sha1("{$vin}|{$id}|{$apiKey}|{$secretKey}"), 0, 10);
+
+        $data = file_get_contents("{$apiPrefix}/{$apiKey}/{$controlSum}/decode/{$vin}.json", false);
+        $result = json_decode($data);
+
+        $decodedData = [];
+        foreach ($result->decode as $data) {
+            $decodedData[$data->label] = $data->value;
+        }
+
+        // echo "Make: " . $decodedData["Make"] . "\n";
+        // echo "Model: " . $decodedData["Model"] . "\n\n";
+
+        return  $decodedData;
+
+    }
 }
