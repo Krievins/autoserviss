@@ -7,22 +7,18 @@
     <div class="users">
         <div class="users__box">
             <table>
-                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Username</th>
+                </tr>
+                @foreach ($members as $member)
                     <tr>
-                        <th>Name</th>
-                        <th>E-mail</th>
-                        <th>Username</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($members as $member)
-                        <tr>
-                            <td>{{ $member['name'] }}</td>
-                            <td>{{ $member['email'] }}</td>
-                            <td>{{ $member['username'] }}</td>
-                        </tr> 
-                    @endforeach 
-                </tbody>
+                        <td>{{ $member['name'] }}</td>
+                        <td>{{ $member['email'] }}</td>
+                        <td>{{ $member['username'] }}</td>
+                    </tr> 
+                @endforeach 
             </table>
             @if (\Session::has('success'))
             <div class="alert alert-success">

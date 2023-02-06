@@ -54,15 +54,13 @@ class CreatecarController extends Controller
         $controlSum = substr(sha1("{$vin}|{$id}|{$apiKey}|{$secretKey}"), 0, 10);
 
         $data = file_get_contents("{$apiPrefix}/{$apiKey}/{$controlSum}/decode/{$vin}.json", false);
+        
         $result = json_decode($data);
 
         $decodedData = [];
         foreach ($result->decode as $data) {
             $decodedData[$data->label] = $data->value;
         }
-
-        // echo "Make: " . $decodedData["Make"] . "\n";
-        // echo "Model: " . $decodedData["Model"] . "\n\n";
 
         return  $decodedData;
 

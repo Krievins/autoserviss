@@ -1,0 +1,94 @@
+@import '../reset.scss';
+@import "../variables.scss";
+
+.car {
+    
+    width: calc(97% - 40px);
+    height: fit-content;
+    background-color: $white;
+    margin: 0px auto;
+    border-radius: 7px;
+    margin-top: 40px;
+    padding: 20px;
+
+    &-info {
+
+        border-bottom: 2px solid black;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+
+    }
+
+    &__form {
+
+        &__left {
+
+            width: 50%;
+            height: 100%;
+            float: left;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        &__right {
+
+            width: 50%;
+            height: 100%;
+            float: left;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        &--input {
+            width: 75%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid rgb(108, 108, 108);
+            background-color: transparent;
+            transition: 600ms ease-in-out;
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+
+            &:focus {
+                color: rgb(131, 131, 131);
+                outline: none;
+                border: none;
+                border-bottom: 2px solid rgb(28, 28, 28);
+                
+            }
+
+            &::placeholder {
+                color: rgb(106, 106, 106);
+            }
+        }
+
+        &--label {
+
+            margin-bottom: 10px;
+
+        }
+    }
+}
+
+
+#myCanvas {
+    /* background-color: lightgrey; */
+    background: url('/img/20230202_111841-removebg-preview.png'); background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid black;
+    // {{URL::asset('/img/logo_dark.webp')}}
+}
+
+.repair {
+
+    width: 97%;
+    height: fit-content;
+    background-color: lightgray; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+
+}
