@@ -51,7 +51,7 @@ table {
 
 .admin {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   font-family: "Poppins", sans-serif;
 }
 .admin__dashboard {
