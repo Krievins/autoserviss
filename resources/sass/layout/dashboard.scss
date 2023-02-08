@@ -4,13 +4,13 @@
 .admin {
 
     width: 100%;
-    height: 100%;
+    height: auto;
     font-family: $font-main;
 
     &__dashboard {
 
         width: 15%;
-        min-height: 100vh;
+        min-height: 100%;
         float: left;
         background-color: #363740;
         display: flex;
@@ -130,7 +130,7 @@
     &__content {
 
         width: 85%;
-        height: 100vh;
+        height: fit-content;
         float: right;
         background-color: #E5E5E5;
 

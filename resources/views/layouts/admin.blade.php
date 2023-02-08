@@ -19,43 +19,41 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body>
-    <main>
-        <div class="admin">
-            {{-- Dashboard --}}
-            <div class='admin__dashboard'>
-                {{-- Statistics --}}
-                <h1 class='admin__dashboard--heading'>Admin Panelis</h1>
-                <a class='admin__dashboard--mainlink' href="{{ url('admin') }}"><i class="icon fa fa-pie-chart"></i>Pārskats</a>
-                {{-- Users --}}
-                <h1 class='admin__dashboard--main'><i class="icon fa fa-user"></i>Lietotāji</h1>
-                <a class='admin__dashboard--link' href="{{ url('admin/users') }}">- Lietotāji</a>
-                <a class='admin__dashboard--link' href="{{ url('admin/create_user') }}">- Izveidot Lietotāju</a>
-                {{-- Cars --}}
-                <h1 class='admin__dashboard--main'><i class="icon fa fa-car"></i>Mašīnas</h1>
-                <a class='admin__dashboard--link' href="{{ url('admin/cars') }}">- Mašīnas</a>
-                <a class='admin__dashboard--link' href="{{ url('admin/create_car') }}">- Izveidot Mašīnu</a>
-                {{-- Categories --}}
-                <h1 class='admin__dashboard--main'><i class="icon fa fa-list"></i></i>Profesijas</h1>
-                <a class='admin__dashboard--link' href="{{ url('admin/category') }}">- Amati</a>
-                <a class='admin__dashboard--link' href="{{ url('admin/create_category') }}">-  Izveidot Amatu</a>
-                @auth
-                    <p class="admin__dashboard--user">Welcome, {{ auth()->user()->name }}!</p>
-                    <a class='admin__dashboard--logout' href="{{ url('/logout') }}">Logout</a>  
-                @endauth
-            </div>
-            <div class='admin__content'>
-                {{-- Navigation Bar --}}
-                @if (isset($pagename))
-                    <nav class="admin__content__nav">
-                        <div class="admin__content__nav__box">
-                            <h1 class="admin__content__nav__box--name" >{{ $pagename }}</h1>
-                        </div>
-                    </nav>
-                @endif
-                {{-- Content layouts --}}
-                @yield('content')
-            </div>
+    <div class="admin">
+        {{-- Dashboard --}}
+        <div class='admin__dashboard'>
+            {{-- Statistics --}}
+            <h1 class='admin__dashboard--heading'>Admin Panelis</h1>
+            <a class='admin__dashboard--mainlink' href="{{ url('admin') }}"><i class="icon fa fa-pie-chart"></i>Pārskats</a>
+            {{-- Users --}}
+            <h1 class='admin__dashboard--main'><i class="icon fa fa-user"></i>Lietotāji</h1>
+            <a class='admin__dashboard--link' href="{{ url('admin/users') }}">- Lietotāji</a>
+            <a class='admin__dashboard--link' href="{{ url('admin/create_user') }}">- Izveidot Lietotāju</a>
+            {{-- Cars --}}
+            <h1 class='admin__dashboard--main'><i class="icon fa fa-car"></i>Mašīnas</h1>
+            <a class='admin__dashboard--link' href="{{ url('admin/cars') }}">- Mašīnas</a>
+            <a class='admin__dashboard--link' href="{{ url('admin/create_car') }}">- Izveidot Mašīnu</a>
+            {{-- Categories --}}
+            <h1 class='admin__dashboard--main'><i class="icon fa fa-list"></i></i>Profesijas</h1>
+            <a class='admin__dashboard--link' href="{{ url('admin/category') }}">- Amati</a>
+            <a class='admin__dashboard--link' href="{{ url('admin/create_category') }}">-  Izveidot Amatu</a>
+            @auth
+                <p class="admin__dashboard--user">Welcome, {{ auth()->user()->name }}!</p>
+                <a class='admin__dashboard--logout' href="{{ url('/logout') }}">Logout</a>  
+            @endauth
         </div>
-    </main>
+        <div class='admin__content'>
+            {{-- Navigation Bar --}}
+            @if (isset($pagename))
+                <nav class="admin__content__nav">
+                    <div class="admin__content__nav__box">
+                        <h1 class="admin__content__nav__box--name" >{{ $pagename }}</h1>
+                    </div>
+                </nav>
+            @endif
+            {{-- Content layouts --}}
+            @yield('content')
+        </div>
+    </div>
 </body>
 </html>

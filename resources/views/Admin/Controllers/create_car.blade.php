@@ -35,7 +35,7 @@
                 <input class="car__form--input" type="text" name="number_plate" id="release_year" required>
                 {{-- Body Type --}}
                 <label class="car__form--label" for="number_plate">Virsbūves Tips</label>
-                <input class="car__form--input" type="text" name="number_plate" id="body_type" required>
+                <input class="car__form--input" type="text" name="body_type" id="body_type" required>
                 {{-- Engine CM3 --}}
                 <label class="car__form--label" for="number_plate">Motora Tilpums (CCM)</label>
                 <input class="car__form--input" type="text" name="number_plate" id="motor" required>
@@ -49,13 +49,14 @@
                 <label class="car__form--label" for="number_plate">Ātrumkārbas Nummurs</label>
                 <input class="car__form--input" type="text" name="number_plate" id="sql_number" required>
             </div>
+            <div class="repair" id="make">
+                <canvas width="200" height="200" id="myCanvas"></canvas>
+                <div class="" id="parent"></div>
+            </div>
             <button type="submit">Submit</button>
         </form>
     </div>
-    <div class="repair" id="make">
-        <canvas id="myCanvas" width="200" height="200"></canvas>
-
-        <div class="input_fields"></div> 
-    </div>
+    
     <script src="{{ asset('js/ajax_decode.js') }}" defer></script>
+    <script src="{{ asset('js/canvas.js') }}" defer></script>
 @endsection 
