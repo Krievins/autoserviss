@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class CreateuserController extends Controller
 {
@@ -18,7 +19,7 @@ class CreateuserController extends Controller
 
     public function all_users () {
         
-        $data = User::all();
+        $data = User::paginate(10);
 
         return view('admin.Controllers.users', ['members'=>$data]);
 
@@ -26,8 +27,7 @@ class CreateuserController extends Controller
 
     public function insert_user () {
 
-        // Create The User
-        
+     
         $attributes = request()->validate([
             'name' => ['required', 'max:255'],
             'surname' => ['required', 'max:255'],
@@ -35,29 +35,30 @@ class CreateuserController extends Controller
             'phone' => ['required'],
             'username' => ['required', 'max:255'],
             'password' => ['required', 'max:255'],
-            'role_id' => ['required']
         ]);
 
-        // dd($attributes['name']);
+       
 
-        $basic  = new \Nexmo\Client\Credentials\Basic(getenv("NEXMO_KEY"), getenv("NEXMO_SECRET"));
-        $client = new \Nexmo\Client($basic);
+        // $basic  = new \Nexmo\Client\Credentials\Basic(getenv("NEXMO_KEY"), getenv("NEXMO_SECRET"));
+        // $client = new \Nexmo\Client($basic);
  
-        $message = $client->message()->send([
-            'to' => '371' . $attributes['phone'],
-            'from' => 'Digitifull',
-            'text' => 'Hey, ' . $attributes['name'] . 
-            'Piekļuve tavam profilam:
+        // $message = $client->message()->send([
+        //     'to' => '371' . $attributes['phone'],
+        //     'from' => 'Digitifull',
+        //     'text' => 'Hey, ' . $attributes['name'] . 
+        //     'Piekļuve tavam profilam:
             
-            E-pasts - '. $attributes['email'] .'
-            Parole - '. $attributes['password'].'
+        //     E-pasts - '. $attributes['email'] .'
+        //     Parole - '. $attributes['password'].'
             
-            Lai Ražīgs Darbiņš!'
-        ]);
+        //     Lai Ražīgs Darbiņš!'
+        // ]);
 
         User::create($attributes);
+        $categories = Category::all();
 
-        return redirect('/admin/users');
+        return response()->json(['success'=>'Laravel ajax example is being processed.']);
+        // return view('admin.Controllers.create_user', ['categories'=>$categories]);
 
     }
 
