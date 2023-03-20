@@ -4,166 +4,132 @@
 .admin {
 
     width: 100%;
-    height: auto;
+    min-height: 100vh;
+    position: relative;
+    // background-color: azure;
     font-family: $font-main;
+    display: flex;
 
     &__dashboard {
 
-        width: 15%;
-        min-height: 100%;
-        float: left;
-        background-color: #363740;
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        width: 20vw;
+        min-height: 100vh;
+        background-color: $bck-color-1;
+        box-shadow: 0px 0px 15px $box-shadow-1;
 
         &--heading {
 
-            margin-top: 30px;
-            margin-bottom: 40px;
+            box-sizing: border-box;
             text-align: center;
-            font-size: 19px;
-            line-height: 24px;
-            letter-spacing: 0.4px;
-            color: #A4A6B3;
-
-
-        }
-
-        // &--heading {
-
-        //     text-decoration: none;
-        //     font-weight: 400;
-        //     font-size: 18px;
-        //     letter-spacing: 0.2px;
-        //     color: #A4A6B3;
-        //     width: 100%;
-        //     line-height: 40px;
-
-        // }
-
-        &--main {
-
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 20px;
-            letter-spacing: 0.2px;
-            color: #A4A6B3;
-            width: 100%;
-            line-height: 40px;
+            padding-top: 50px;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 1px;
 
         }
 
-        &--mainlink {
+        &__nav {
 
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 20px;
-            letter-spacing: 0.2px;
-            color: #A4A6B3;
-            width: 100%;
-            line-height: 40px;
-            transition: 400ms ease-in-out;
-
-            &:hover {
-
-                // border-left: ;
-                color: #3F4049;
-
-            }
-
-        }
-
-        &--link {
-
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 13px;
-            margin-left: 50px;
-            // line-height: 20px;
-            letter-spacing: 0.2px;
-            color: #A4A6B3;
-            width: 100%;
-            line-height: 40px;
-            transition: 400ms ease-in-out;
-    
-            &:hover {
-
-                // border-left: ;
-                color: #3F4049;
-
-            }
-        }
-
-        &--user {
-
-            position: absolute;
-            bottom: 50px;
-            align-self: center;
-            color: #A4A6B3;
-
-        }
-
-        &--logout {
-
-            position: absolute;
-            bottom: 20px;
+            margin-top: 28px;
+            padding: 0px 30px;
             display: flex;
-            align-self: center;
-            color: #83848d;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 400ms ease-in-out;
+            flex-direction: column;
 
-            &:hover {
+            &--mainlink {
 
-                color: #A4A6B3;
+                margin-top: 30px;
+                font-weight: 500;
+                font-size: 16px;
+                color: $color-black;
+                text-decoration: none;
+                line-height: 27px;
+                transition: $basic-transition;
+
+                &-icon {
+
+                    margin-right: 5px;
+
+                }
+
+                &:hover {
+
+                    color: $basic-link-color;
+
+                }
 
             }
 
+            &--main {
+
+                margin-top: 30px;
+                font-weight: 500;
+                font-size: 16px;
+                color: $color-black;
+                text-decoration: none;
+                line-height: 27px;
+                // margin-bottom: 5px;
+
+                &-icon {
+
+                    margin-right: 5px;
+
+                }
+
+            }
+
+            &--link {
+
+                text-decoration: none;
+                color: $color-black;
+                line-height: 25px;
+                margin-left: 15px;
+
+            }
         }
 
     }
 
     &__content {
 
-        width: 85%;
+        width: 80vw;
+        margin: 0px 20px;
         height: fit-content;
-        float: right;
-        background-color: #E5E5E5;
 
         &__nav {
             margin-top: 10px;
             width: 100%;
-            height: 40px;
-            
+            height: 7vh;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid $border-color-light;
 
             &__box {
 
-                width: 95%;
+                width: 100%;
                 height: 100%;
-                margin: 0 auto;
                 display: flex;
-                padding: 0px 15px;
+                flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                border-bottom: solid 2px #252733;
 
-                &--name {
+                &__auth {
 
-                    color: #92949c;
-                    font-size: 17px;
-                    line-height: 30px;
-                    letter-spacing: 0.3px;
-
-                }
-
-                &--user {
-
+                    width: 20%;
                     display: flex;
-                    
+                    flex-direction: column;
+                    align-items: center;
+
+                    &--user {
+
+                        font-size: 14px;
+
+                    }
+
+                    &--logout {
+
+                        font-size: 12px;
+                        
+                    }
 
                 }
 
@@ -171,13 +137,53 @@
 
         }
 
+        &__box {
+
+            width: 100%;
+            height: 93vh;
+
+        }
+
     }
 
 }
 
-.icon {
+// For Colapsible Content
 
-    margin-left: 25px;
-    margin-right: 20px;
+.collapsible {
+    background-color: transparent;
+    font-family: $font-main;
+    text-align: left;
+    font-size: 16px;
+    border: none;
+    border-bottom:2px solid transparent;
+    transition: $basic-transition;
 
-}
+  }
+  
+  .active, .collapsible:hover {
+    border-bottom:2px solid $basic-link-color;
+    color: $color-black;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    display:flex; 
+    flex-direction: column; 
+    // padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
+  }

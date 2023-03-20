@@ -1,9 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/admin/create_car.css": "/css/admin/create_car.css",
     "/css/admin/users.css": "/css/admin/users.css",
     "/css/dashboard.css": "/css/dashboard.css",
     "/css/sessions/login.css": "/css/sessions/login.css",
-    "/css/home/home.css": "/css/home/home.css"
+    "/css/home/home.css": "/css/home/home.css",
+    "/css/admin/create_car.css": "/css/admin/create_car.css",
+    "/css/admin/create_user.css": "/css/admin/create_user.css"
 }

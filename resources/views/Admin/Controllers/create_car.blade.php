@@ -50,7 +50,7 @@
                 <input class="car__form--input" type="text" name="number_plate" id="sql_number" required>
             </div>
             <div class="repair" id="make">
-                <canvas width="200" height="200" id="myCanvas"></canvas>
+                <canvas  id="myCanvas"></canvas>
                 <div class="" id="parent"></div>
             </div>
             <button type="submit">Submit</button>

@@ -20,6 +20,7 @@ const mix = require('laravel-mix');
         .sass('resources/sass/layout/dashboard.scss', 'public/css')
         .sass('resources/sass/admin/users.scss', 'public/css/admin')
         .sass('resources/sass/admin/create_car.scss', 'public/css/admin')
+        .sass('resources/sass/admin/create_user.scss', 'public/css/admin')
         .sass('resources/sass/home/home.scss', 'public/css/home');
 
     // REACT
