@@ -1,17 +1,24 @@
 @extends('layouts.admin', [
-    'stylesheet' => mix('css/home/home.css'),
-    'title' => 'Admin - Create Category',
-    'pagename' => 'Izveidot Amatu'
+    'stylesheet' => mix('css/admin/create_category.css'),
+    // 'pagename' => 'Izveidot Darbinieku'
 ])
 
 @section('content')
-    <h1 style="margin-top: 40px;">Izveidot Amatu</h1>
-    <form action="/admin/create_category" method="post">
-        @csrf
-        {{-- Name --}}
-        <label for="category_name">Amata Nosaukums</label>
-        <input type="text" name="category_name" id="category_name" required>
-        {{-- Button --}}
-        <button type="submit">Apstiprināt</button>
-    </form>
+    <div class="addcat">
+        <div class="addcat__box">
+            <h1 class="addcat__box--heading">Izveidot Amatu</h1>
+        </div>
+        <div class="addcat__formbox">
+            <form id="add-user-form" class="addcat__formbox__form" action="{{ url("/admin/create_category") }}" method="post"> 
+                @csrf
+                <div class="addcat__formbox__form__left">
+                    <label class="addcat__formbox__form__left--label" for="name">Nosaukums</label>
+                    <input class="addcat__formbox__form__left--input" type="text" name="name" id="name" required>
+                    {{-- SurName --}}
+                </div>
+                {{-- Button --}}
+                <button class="addcat__formbox__form--button" type="submit">Pievienot</button>
+            </form>
+        </div>
+    </div>
 @endsection

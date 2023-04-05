@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CreatecarController;
 use App\Http\Controllers\CreateuserController;
+use App\Http\Controllers\CreatecategoryController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RegisterController;
@@ -54,9 +55,9 @@ Route::get('/admin/get-car-data', [CreatecarController::class, 'get_api_data'])-
 
 
 // For Profesie Section
-Route::get('/admin/create_category', [AdminController::class, 'categoryIndex'])->middleware('admin');
-Route::post('/admin/create_category', [AdminController::class, 'categoryCreate'])->middleware('admin');
-Route::get('/admin/category', [AdminController::class, 'showCategories'])->middleware('admin');
+Route::get('/admin/create_category', [CreatecategoryController::class, 'categoryIndex'])->middleware('admin');
+Route::post('/admin/create_category', [CreatecategoryController::class, 'categoryCreate'])->middleware('admin');
+Route::get('/admin/category', [CreatecategoryController::class, 'showCategories'])->middleware('admin');
 
 // Worker
 Route::get('worker', [SessionsController::class, 'worker'])->middleware('auth');

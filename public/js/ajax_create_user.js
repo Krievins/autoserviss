@@ -21,6 +21,8 @@ $(document).ready(function() {
             },
             'success': function(response) {
                 alert(response.success);
+                
+                document.getElementById("#add-user-form").reset();
             }   
         });
     });

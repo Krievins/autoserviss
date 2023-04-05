@@ -11,6 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
+    mix.copy('node_modules/chart.js/dist/chart.js', 'public/chart.js/chart.js');
 
 
     // SASSS
@@ -18,14 +19,21 @@ const mix = require('laravel-mix');
     mix.sass('resources/sass/app.scss', 'public/css')
         .sass('resources/sass/sessions/login.scss', 'public/css/sessions')
         .sass('resources/sass/layout/dashboard.scss', 'public/css')
+        .sass('resources/sass/admin/index.scss', 'public/css/admin')
         .sass('resources/sass/admin/users.scss', 'public/css/admin')
         .sass('resources/sass/admin/create_car.scss', 'public/css/admin')
+        .sass('resources/sass/admin/create_category.scss', 'public/css/admin')
+        .sass('resources/sass/admin/category.scss', 'public/css/admin')
+        .sass('resources/sass/admin/cars.scss', 'public/css/admin')
         .sass('resources/sass/admin/create_user.scss', 'public/css/admin')
         .sass('resources/sass/home/home.scss', 'public/css/home');
+
+
 
     // REACT
 
     mix.js('resources/js/app.js', 'js/app.js')
+
     .react();
 
 

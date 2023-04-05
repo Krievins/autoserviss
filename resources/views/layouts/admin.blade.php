@@ -30,13 +30,9 @@
                 {{-- Users --}}
                 <a href="{{ url('admin/users') }}" class='admin__dashboard__nav--main'><i class="icon fa fa-user admin__dashboard__nav--main-icon"></i>Lietotāji</a>
                 {{-- Cars --}}
-                <h1 class='admin__dashboard__nav--main'><i class="icon fa fa-car admin__dashboard__nav--main-icon"></i>Mašīnas</h1>
-                <a class='admin__dashboard__nav--link' href="{{ url('admin/cars') }}">- Mašīnas</a>
-                <a class='admin__dashboard__nav--link' href="{{ url('admin/create_car') }}">- Izveidot Mašīnu</a>
+                <a href="{{ url('admin/cars') }}" class='admin__dashboard__nav--main'><i class="icon fa fa-car admin__dashboard__nav--main-icon"></i>Mašīnas</a>
                 {{-- Categories --}}
-                <h1 class='admin__dashboard__nav--main'><i class="icon fa fa-list admin__dashboard__nav--main-icon"></i></i>Profesijas</h1>
-                <a class='admin__dashboard__nav--link' href="{{ url('admin/category') }}">- Amati</a>
-                <a class='admin__dashboard__nav--link' href="{{ url('admin/create_category') }}">-  Izveidot Amatu</a>
+                <a href="{{ url('admin/category') }}" class='admin__dashboard__nav--main'><i class="icon fa fa-list admin__dashboard__nav--main-icon"></i>Profesijas</a>
             </div>
         </div>
         <div class='admin__content'>

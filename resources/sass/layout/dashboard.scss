@@ -4,11 +4,13 @@
 .admin {
 
     width: 100%;
-    min-height: 100vh;
+    height: fit-content;
     position: relative;
     // background-color: azure;
     font-family: $font-main;
     display: flex;
+    height: fit-content;
+    overflow: auto;
 
     &__dashboard {
 
@@ -94,6 +96,7 @@
         width: 80vw;
         margin: 0px 20px;
         height: fit-content;
+        overflow: auto;
 
         &__nav {
             margin-top: 10px;

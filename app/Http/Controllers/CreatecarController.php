@@ -33,7 +33,7 @@ class CreatecarController extends Controller
 
     public function show_cars () {
 
-        $data = Car::all();
+        $data = Car::paginate(10);
 
         return view('admin.Controllers.cars', ['cars'=>$data]);
 

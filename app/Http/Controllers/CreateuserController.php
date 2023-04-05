@@ -57,7 +57,7 @@ class CreateuserController extends Controller
         User::create($attributes);
         $categories = Category::all();
 
-        return response()->json(['success'=>'Laravel ajax example is being processed.']);
+        return response()->json(['success'=>'Lietotājs Veiksmīgi Tika Pievienots.']);
         // return view('admin.Controllers.create_user', ['categories'=>$categories]);
 
     }
