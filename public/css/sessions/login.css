@@ -49,6 +49,30 @@ table {
   border-spacing: 0;
 }
 
+th {
+  background-color: rgb(202, 202, 202);
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: rgb(150, 150, 150);
+}
+
+th, td {
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 .login {
   width: 100%;
   height: 100vh;

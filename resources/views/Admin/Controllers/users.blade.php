@@ -22,7 +22,7 @@
                         <td>{{ $member['username'] }}</td>
                         <td>
                             <form onchange="redirect()">
-                                <select id="redirect" name="redirect">
+                                <select class="users__table--select" id="redirect" name="redirect">
                                     <option value="">-</option>
                                     <option value="">Skatit</option>
                                     <option value="">Labot</option>

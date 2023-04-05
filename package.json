@@ -42,5 +42,8 @@
     "bugs": {
         "url": "https://github.com/Krievins/autoserviss/issues"
     },
-    "homepage": "https://github.com/Krievins/autoserviss#readme"
+    "homepage": "https://github.com/Krievins/autoserviss#readme",
+    "dependencies": {
+        "chart.js": "^4.2.1"
+    }
 }

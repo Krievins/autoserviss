@@ -50,12 +50,39 @@ table {
   border-spacing: 0;
 }
 
+th {
+  background-color: rgb(202, 202, 202);
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: rgb(150, 150, 150);
+}
+
+th, td {
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 .admin {
   width: 100%;
-  min-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
   font-family: "Montserrat", sans-serif;
   display: flex;
+  height: fit-content;
+  overflow: auto;
 }
 .admin__dashboard {
   width: 20vw;
@@ -114,6 +141,7 @@ table {
   margin: 0px 20px;
   height: -moz-fit-content;
   height: fit-content;
+  overflow: auto;
 }
 .admin__content__nav {
   margin-top: 10px;

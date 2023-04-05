@@ -54,9 +54,9 @@ class SessionsController extends Controller
 
     public function admin () {
 
-        $data = User::all();
+        // $data = User::all();
 
-        return view('layouts.admin', ['users' => $data]);
+        return view('admin.Controllers.index');
 
     }
 
