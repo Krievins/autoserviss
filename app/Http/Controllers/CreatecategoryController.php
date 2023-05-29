@@ -21,7 +21,7 @@ class CreatecategoryController extends Controller
 
         Category::create($attributes);
 
-        return redirect('/admin/category');
+        return response()->json(['success'=>'Kategorija Veiksmīgi Tika Pievienota.']);
 
     }
 

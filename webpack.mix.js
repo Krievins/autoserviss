@@ -22,6 +22,7 @@ const mix = require('laravel-mix');
         .sass('resources/sass/admin/index.scss', 'public/css/admin')
         .sass('resources/sass/admin/users.scss', 'public/css/admin')
         .sass('resources/sass/admin/create_car.scss', 'public/css/admin')
+        .sass('resources/sass/admin/Cars/view_car.scss', 'public/css/admin/Cars')
         .sass('resources/sass/admin/create_category.scss', 'public/css/admin')
         .sass('resources/sass/admin/category.scss', 'public/css/admin')
         .sass('resources/sass/admin/cars.scss', 'public/css/admin')

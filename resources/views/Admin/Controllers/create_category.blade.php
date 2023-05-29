@@ -14,11 +14,11 @@
                 <div class="addcat__formbox__form__left">
                     <label class="addcat__formbox__form__left--label" for="name">Nosaukums</label>
                     <input class="addcat__formbox__form__left--input" type="text" name="name" id="name" required>
-                    {{-- SurName --}}
                 </div>
                 {{-- Button --}}
                 <button class="addcat__formbox__form--button" type="submit">Pievienot</button>
             </form>
         </div>
     </div>
+    <script src="{{ asset('js/ajax_create_category.js') }}" defer></script>
 @endsection

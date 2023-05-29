@@ -53,6 +53,10 @@ Route::post('/admin/create_car', [CreatecarController::class, 'create_car'])->mi
 Route::get('/admin/cars', [CreatecarController::class, 'show_cars'])->middleware('admin');
 Route::get('/admin/get-car-data', [CreatecarController::class, 'get_api_data'])->middleware('admin');
 
+Route::get('/admin/{id}/view', [CreatecarController::class, 'view'])->middleware('auth')->name('admin.car_view');
+Route::get('/admin/{id}/edit', [CreatecarController::class, 'edit'])->middleware('auth')->name('admin.car_edit');
+// Route::put('admin/{id}', [CreatecarController::class, 'update'])->middleware('auth')->name('todos.update');
+
 
 // For Profesie Section
 Route::get('/admin/create_category', [CreatecategoryController::class, 'categoryIndex'])->middleware('admin');

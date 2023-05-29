@@ -54,7 +54,7 @@ class SessionsController extends Controller
 
     public function admin () {
 
-        // $data = User::all();
+        $data = User::select();
 
         return view('admin.Controllers.index');
 

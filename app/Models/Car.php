@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Cases;
+
 
 class Car extends Model
 {
@@ -16,16 +18,30 @@ class Car extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'vin',
         'owner_name',
         'owner_phone',
         'number_plate',
         'release_year',
         'brand',
         'model',
+        'body_type',
+        'motor',
+        'drive_type',
+        'fuel_type',
+        'sql_number',
         'user_id',
         'category_id',
         'status_id',
-        'descript',
-        'filenam'
     ];
+
+    public function cases()
+    {
+        return $this->hasMany(Cases::class);
+    }
+
+    public function marks()
+    {
+        return $this->hasManyThrough(Marks::class, Cases::class);
+    }
 }
