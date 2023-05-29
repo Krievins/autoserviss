@@ -1,7 +1,8 @@
-@extends('layouts.main', [
-    'stylesheet' => mix('css/home/home.css')
+@extends('layouts.worker', [
+    'stylesheet' => mix('css/home/home.css'),
+    'pagename' => 'Darbinieks - Sākums'
 ])
 
 @section('content')
-    <p>Worker</p>
+    
 @endsection

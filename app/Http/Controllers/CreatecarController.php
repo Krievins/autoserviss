@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Car;
 use App\Models\User;
+use App\Models\Marks;
+use App\Models\Cases;
 
 class CreatecarController extends Controller
 {
@@ -11,31 +14,75 @@ class CreatecarController extends Controller
 
         $data = User::all();
 
-        return view('admin.Controllers.create_car', ['users'=> $data]);
+        return view('admin.Controllers.Cars.create_car', ['users'=> $data]);
 
     }
 
-    public function create_car () {
+    public function view ($id) {
 
-        $attributes = request()->validate([
-            'owner_name' => ['required', 'max:255'],
-            'owner_phone' => ['required', 'max:255'],
-            'number_plate' => ['required', 'max:255'],
-            'release_year' => ['required', 'max:255'],
-            'descript' => ['required', 'max:255', 'min:7']
-        ]);
+        $data = Car::findOrFail($id);;
 
-        Car::create($attributes);
-
-        return redirect('/admin/cars');
+        return view('admin.Controllers.Cars.view_car', ['cars'=> $data]);
 
     }
+
+    public function edit ($id) {
+
+        $data = Car::findOrFail($id);;
+
+        return view('admin.Controllers.Cars.edit_cars', ['cars'=> $data]);
+
+    }
+
+
+
+    public function create_car() {
+
+    $attributes = request()->validate([
+        'vin' => ['required', 'max:255'],
+        'owner_name' => ['required', 'max:255'],
+        'owner_phone' => ['required', 'max:255'],
+        'number_plate' => ['required', 'max:255'],
+        'release_year' => ['required', 'max:255'],
+        'brand' => ['required', 'max:255'],
+        'model' => ['required', 'max:255'],
+        'body_type' => ['required', 'max:255'],
+        'motor' => ['required', 'max:255'],
+        'fuel_type' => ['required', 'max:255'],
+        'drive_type' => ['required', 'max:255'],
+        'sql_number' => ['required', 'max:255'],
+    ]);
+
+    $car = Car::create($attributes);
+    $carId = $car->id;
+
+    $case = new Cases();
+    $case->car_id = $carId; // Replace with the appropriate car ID
+    $case->save();
+    $caseId = $case->id;
+
+    $inputValues = request()->input('input_values');
+    $canvasCircles = request()->input('canvas_circles');
+
+
+    foreach ($canvasCircles as $index => $circle) {
+        $mark = new Marks();
+        $mark->mark_x = $circle['x'];
+        $mark->mark_y = $circle['y'];
+        $mark->mark_desc = $inputValues[$index];
+        $mark->case_id = $caseId;
+        $mark->save();
+    }
+
+
+    return response()->json(['success' => 'Automašīna veiksmīgi tika pievienota.']);
+}
 
     public function show_cars () {
 
-        $data = Car::paginate(10);
+        $data = Car::withCount('marks')->paginate(10);
 
-        return view('admin.Controllers.cars', ['cars'=>$data]);
+        return view('admin.Controllers.Cars.cars', ['cars' => $data]);
 
     }
 

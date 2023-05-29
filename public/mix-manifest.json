@@ -10,6 +10,7 @@
     "/css/admin/cars.css": "/css/admin/cars.css",
     "/css/admin/category.css": "/css/admin/category.css",
     "/css/admin/create_category.css": "/css/admin/create_category.css",
+    "/css/admin/Cars/view_car.css": "/css/admin/Cars/view_car.css",
     "/css/admin/create_car.css": "/css/admin/create_car.css",
     "/chart.js/chart.js": "/chart.js/chart.js"
 }

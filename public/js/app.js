@@ -24,6 +24,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/admin/Cars/view_car.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/admin/Cars/view_car.scss ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/sass/admin/create_category.scss":
 /*!***************************************************!*\
   !*** ./resources/sass/admin/create_category.scss ***!
@@ -251,6 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			"css/admin/cars": 0,
 /******/ 			"css/admin/category": 0,
 /******/ 			"css/admin/create_category": 0,
+/******/ 			"css/admin/Cars/view_car": 0,
 /******/ 			"css/admin/create_car": 0
 /******/ 		};
 /******/ 		
@@ -301,18 +315,19 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/sessions/login.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/layout/dashboard.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/index.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/users.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/create_car.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/create_category.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/category.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/cars.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/create_user.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/create_car"], () => (__webpack_require__("./resources/sass/home/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/sessions/login.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/layout/dashboard.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/users.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/create_car.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/Cars/view_car.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/create_category.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/category.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/cars.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/admin/create_user.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/admin/users","css/admin/index","css/dashboard","css/sessions/login","css/home/home","css/admin/create_user","css/admin/cars","css/admin/category","css/admin/create_category","css/admin/Cars/view_car","css/admin/create_car"], () => (__webpack_require__("./resources/sass/home/home.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

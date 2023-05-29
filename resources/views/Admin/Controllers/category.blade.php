@@ -1,6 +1,6 @@
 @extends('layouts.admin', [
     'stylesheet' => mix('css/admin/category.css'),
-    'title' => 'Admin - All Cars',
+    'title' => 'Admin - Amatu Saraksts',
     'pagename' => 'Profesiju Saraksts'
 ])
 

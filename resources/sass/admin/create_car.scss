@@ -175,11 +175,13 @@
 
     width: 90%;
     margin: 0px auto;
-    height: 90%;
+    height: fit-content;
     box-shadow: 0px 0px 10px $box-shadow-1;
     border-radius: 4px;
     margin-top: 30px;
     position: relative;
+    margin-bottom: 50px;
+    box-sizing: border-box;
 
     &__box {
         margin-top: 40px;
@@ -207,10 +209,26 @@
 .canvasbox {
     // position: absolute;
     background: url('/img/20230202_111841-removebg-preview.png'); background-repeat: no-repeat;
-    background-size: contain;
-    border: 2px solid black;
-    width: 300px;
-    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid $border-color-light;
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
     margin: 0px auto;
+    margin-top: 20px;
     // {{URL::asset('/img/logo_dark.webp')}}
+}
+
+.repair {
+
+    display: flex;
+
+}
+
+.input_fields {
+
+    min-height: 400px;
+    width: 100%;
+
 }

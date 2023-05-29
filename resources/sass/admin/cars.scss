@@ -6,11 +6,12 @@
 
     width: 95%;
     margin: 0px auto;
-    height: 90%;
+    height: fit-content;
     box-shadow: 0px 0px 10px $box-shadow-1;
     border-radius: 4px;
     margin-top: 40px;
     position: relative;
+    padding-bottom: 100px;
 
     &__paginators {
 
@@ -81,9 +82,140 @@
 
     }
 
-    &__table {
+    &__box {
 
         width: 97%;
+        margin: 0px auto;
+        border: 2px solid $border-color-light;
+        height: 120px;
+        margin-top: 20px;
+        border-radius: 4px;
+        border-left: 7px solid rgb(192, 251, 104);
+        padding: 10px 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:hover {
+
+            box-shadow: 0px 0px 20px $box-shadow-1;
+
+        }
+
+        &--heading {
+
+            font-size: 14px;
+            color: $lightslate-gray;
+
+        }
+
+        &--watch {
+
+            position: absolute;
+            right: 60px;
+            top: 10px;
+            padding: 4px;
+            border: 2px solid $lightslate-gray;
+            border-radius: 3px;
+            color: $lightslate-gray;
+            font-size: 10px;
+            transition: $basic-transition;
+
+            &:hover {
+
+                color: rgb(151, 197, 82);
+                border-color: rgb(151, 197, 82);
+
+            }
+
+
+        }
+
+        &--edit {
+
+            position: absolute;
+            right: 35px;
+            top: 10px;
+            padding: 4px;
+            border: 2px solid $lightslate-gray;
+            border-radius: 3px;
+            color: $lightslate-gray;
+            font-size: 10px;
+            transition: $basic-transition;
+
+            &:hover {
+
+                color: rgb(23, 77, 255);
+                border-color: rgb(23, 77, 255);
+
+            }
+
+
+        }
+
+        &--delete {
+
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 4px;
+            border: 2px solid $lightslate-gray;
+            border-radius: 3px;
+            color: $lightslate-gray;
+            font-size: 10px;
+            transition: $basic-transition;
+
+            &:hover {
+
+                color: rgb(220, 56, 56);
+                border-color: rgb(220, 56, 56);
+
+            }
+
+
+        }
+
+        &--data {
+
+            font-size: 14px;
+            color: $lightslate-gray;
+            margin-top: 5px;
+
+        }
+
+        &__info {
+
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+
+            &__content {
+
+                width: 25%;
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+
+            }
+
+        }
+
+        &--date {
+
+            font-size: 11px;
+            color: $lightslate-gray;
+
+        }
+
+    }
+
+    &__table {
+
+        width: 100%;
         margin: 0px auto;
         margin-top: 20px;
         border-collapse: collapse;
@@ -91,6 +223,12 @@
         overflow: hidden;
 
     }
+
+}
+
+table {
+
+    width: 100%;
 
 }
 
@@ -112,5 +250,11 @@ th, td {
 .hidden {
 
     visibility: hidden;
+
+}
+
+.strong {
+
+    font-weight: bold;
 
 }
