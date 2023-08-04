@@ -20,13 +20,21 @@ const mix = require('laravel-mix');
         .sass('resources/sass/sessions/login.scss', 'public/css/sessions')
         .sass('resources/sass/layout/dashboard.scss', 'public/css')
         .sass('resources/sass/admin/index.scss', 'public/css/admin')
-        .sass('resources/sass/admin/users.scss', 'public/css/admin')
-        .sass('resources/sass/admin/create_car.scss', 'public/css/admin')
+
+        // Users
+        .sass('resources/sass/admin/Users/users.scss', 'public/css/admin/Users')
+        .sass('resources/sass/admin/Users/create_user.scss', 'public/css/admin/Users')
+
+        // Cars
+        .sass('resources/sass/admin/Cars/create_car.scss', 'public/css/admin/Cars')
         .sass('resources/sass/admin/Cars/view_car.scss', 'public/css/admin/Cars')
-        .sass('resources/sass/admin/create_category.scss', 'public/css/admin')
-        .sass('resources/sass/admin/category.scss', 'public/css/admin')
-        .sass('resources/sass/admin/cars.scss', 'public/css/admin')
-        .sass('resources/sass/admin/create_user.scss', 'public/css/admin')
+        .sass('resources/sass/admin/Cars/cars.scss', 'public/css/admin/Cars')
+
+        // Category
+        .sass('resources/sass/admin/Category/create_category.scss', 'public/css/admin/Category')
+        .sass('resources/sass/admin/Category/category.scss', 'public/css/admin/Category')
+        
+        
         .sass('resources/sass/home/home.scss', 'public/css/home');
 
 

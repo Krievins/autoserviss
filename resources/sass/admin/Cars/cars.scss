@@ -1,0 +1,260 @@
+@import '../../reset.scss';
+@import "../../variables.scss";
+
+
+.cars {
+
+    width: 95%;
+    margin: 0px auto;
+    height: fit-content;
+    box-shadow: 0px 0px 10px $box-shadow-1;
+    border-radius: 4px;
+    margin-top: 40px;
+    position: relative;
+    padding-bottom: 100px;
+
+    &__paginators {
+
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+
+        &--index {
+
+            width: fit-content;
+            border: 1px solid $border-color-light;
+            padding: 5px 10px;
+            border-radius: 2px;
+            margin: 0px 5px;
+
+        }
+
+        &--link {
+
+            text-decoration: none;
+            color: $color-black;
+            border: 1px solid $border-color-light;
+            padding: 5px 10px;
+            border-radius: 2px;
+            transition: 150ms ease-in;
+            font-weight: 600;
+
+            &:hover {
+
+                background-color: $border-color-light;
+
+            }
+
+        }
+
+    }
+
+    &__nav {
+
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        border-bottom: 2px solid $border-color-light;
+        box-sizing: border-box;
+
+        &--button {
+
+            font-size: 12px;
+            text-decoration: none;
+            color: $white;
+            background-color: gray;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: $basic-transition;
+            
+            &:hover {
+
+                box-shadow: 0px 0px 5px gray;
+
+            }
+
+        }
+
+    }
+
+    &__box {
+
+        width: 97%;
+        margin: 0px auto;
+        border: 2px solid $border-color-light;
+        height: 120px;
+        margin-top: 20px;
+        border-radius: 4px;
+        border-left: 7px solid rgb(192, 251, 104);
+        padding: 10px 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:hover {
+
+            box-shadow: 0px 0px 20px $box-shadow-1;
+
+        }
+
+        &--heading {
+
+            font-size: 14px;
+            color: $lightslate-gray;
+
+        }
+
+        &--watch {
+
+            position: absolute;
+            right: 60px;
+            top: 10px;
+            padding: 4px;
+            border: 2px solid $lightslate-gray;
+            border-radius: 3px;
+            color: $lightslate-gray;
+            font-size: 10px;
+            transition: $basic-transition;
+
+            &:hover {
+
+                color: rgb(151, 197, 82);
+                border-color: rgb(151, 197, 82);
+
+            }
+
+
+        }
+
+        &--edit {
+
+            position: absolute;
+            right: 35px;
+            top: 10px;
+            padding: 4px;
+            border: 2px solid $lightslate-gray;
+            border-radius: 3px;
+            color: $lightslate-gray;
+            font-size: 10px;
+            transition: $basic-transition;
+
+            &:hover {
+
+                color: rgb(23, 77, 255);
+                border-color: rgb(23, 77, 255);
+
+            }
+
+
+        }
+
+        &--delete {
+
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 4px;
+            border: 2px solid $lightslate-gray;
+            border-radius: 3px;
+            color: $lightslate-gray;
+            font-size: 10px;
+            transition: $basic-transition;
+
+            &:hover {
+
+                color: rgb(220, 56, 56);
+                border-color: rgb(220, 56, 56);
+
+            }
+
+
+        }
+
+        &--data {
+
+            font-size: 14px;
+            color: $lightslate-gray;
+            margin-top: 5px;
+
+        }
+
+        &__info {
+
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+
+            &__content {
+
+                width: 25%;
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+
+            }
+
+        }
+
+        &--date {
+
+            font-size: 11px;
+            color: $lightslate-gray;
+
+        }
+
+    }
+
+    &__table {
+
+        width: 100%;
+        margin: 0px auto;
+        margin-top: 20px;
+        border-collapse: collapse;
+        border-radius: 5px;
+        overflow: hidden;
+
+    }
+
+}
+
+table {
+
+    width: 100%;
+
+}
+
+th {
+    background-color: $table-heading-color;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover {background-color: $basic-link-color;}
+
+th, td {
+    text-align: left    ;
+    line-height: 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.hidden {
+
+    visibility: hidden;
+
+}
+
+.strong {
+
+    font-weight: bold;
+
+}

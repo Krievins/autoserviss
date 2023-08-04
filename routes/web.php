@@ -47,6 +47,9 @@ Route::post('/admin/create_user', [CreateuserController::class, 'insert_user'])-
 Route::get('/admin/users', [CreateuserController::class, 'all_users'])->middleware('auth');
 Route::post('/admin/users', [CreateuserController::class, 'send_msg'])->middleware('auth');
 
+Route::get('/admin/user/{id}/view', [CreateuserController::class, 'view'])->middleware('auth')->name('admin.user_view');
+Route::get('/admin/user/{id}/edit', [CreateuserController::class, 'edit'])->middleware('auth')->name('admin.user_edit');
+
 // For Car Sections
 Route::get('/admin/create_car', [CreatecarController::class, 'index'])->middleware('admin');
 Route::post('/admin/create_car', [CreatecarController::class, 'create_car'])->middleware('admin');
@@ -55,7 +58,6 @@ Route::get('/admin/get-car-data', [CreatecarController::class, 'get_api_data'])-
 
 Route::get('/admin/{id}/view', [CreatecarController::class, 'view'])->middleware('auth')->name('admin.car_view');
 Route::get('/admin/{id}/edit', [CreatecarController::class, 'edit'])->middleware('auth')->name('admin.car_edit');
-// Route::put('admin/{id}', [CreatecarController::class, 'update'])->middleware('auth')->name('todos.update');
 
 
 // For Profesie Section
@@ -65,8 +67,3 @@ Route::get('/admin/category', [CreatecategoryController::class, 'showCategories'
 
 // Worker
 Route::get('worker', [SessionsController::class, 'worker'])->middleware('auth');
-
-// Route::get('/', function () {
-//     event(new App\Events\NotificationEvent('Someone'));
-//     return "Event has been sent!";
-// });

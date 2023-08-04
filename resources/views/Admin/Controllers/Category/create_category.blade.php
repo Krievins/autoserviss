@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-    'stylesheet' => mix('css/admin/create_category.css'),
+    'stylesheet' => mix('css/admin/Category/create_category.css'),
     // 'pagename' => 'Izveidot Darbinieku'
 ])
 
