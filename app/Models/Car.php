@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Cases;
-
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class Car extends Model
 {
@@ -35,13 +35,8 @@ class Car extends Model
         'status_id',
     ];
 
-    public function cases()
-    {
-        return $this->hasMany(Cases::class);
-    }
-
-    public function marks()
-    {
+    public function marks() {
         return $this->hasManyThrough(Marks::class, Cases::class);
     }
+    
 }

@@ -9,7 +9,7 @@ class CreatecategoryController extends Controller
 {
     public function categoryIndex () {
 
-        return view('admin.Controllers.create_category');
+        return view('admin.Controllers.Category.create_category');
 
     }
 
@@ -29,7 +29,7 @@ class CreatecategoryController extends Controller
 
         $data = Category::paginate(10);
 
-        return view('admin.Controllers.category', ['category' => $data]);
+        return view('admin.Controllers.Category.category', ['category' => $data]);
 
     }
 }

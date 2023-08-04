@@ -1,8 +1,8 @@
-@import '../reset.scss';
-@import "../variables.scss";
+@import '../../reset.scss';
+@import "../../variables.scss";
 
 
-.users {
+.category {
 
     width: 95%;
     margin: 0px auto;
@@ -90,28 +90,27 @@
         border-radius: 5px;
         overflow: hidden;
 
-        &--select {
-
-            width: 50%;
-            border: none;
-            background-color: transparent;
-            transition: 400ms ease-in-out all;
-            border-bottom: 2px solid $border-color-light;
-            color: $basic-link-color;
-
-            &:focus {
-                color: $color-black;
-                outline: none;
-                border: none;
-                border-bottom: 2px solid rgb(28, 28, 28);
-                
-            }
-
-            &::placeholder {
-                color: rgb(106, 106, 106);
-            }
-        }
-
     }
+
+}
+
+th {
+    background-color: $table-heading-color;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover {background-color: $basic-link-color;}
+
+th, td {
+    text-align: left    ;
+    line-height: 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.hidden {
+
+    visibility: hidden;
 
 }

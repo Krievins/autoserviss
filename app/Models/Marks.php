@@ -16,8 +16,8 @@ class Marks extends Model
         'case_id'
     ];
 
-    public function case()
-    {
+    public function caseRelation() {
         return $this->belongsTo(Cases::class, 'case_id');
     }
+
 }

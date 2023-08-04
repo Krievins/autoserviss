@@ -11,8 +11,11 @@ class Cases extends Model
 
 
     public function marks() {
-
-        return $this->hasMany(Marks ::class);
-        
+        return $this->hasMany(Marks::class);
     }
+
+    public function cars() {
+        return $this->belongsTo(Cars::class, 'car_id');
+    }
+    
 }

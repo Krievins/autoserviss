@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-    'stylesheet' => mix('css/admin/create_car.css'),
+    'stylesheet' => mix('css/admin/Cars/create_car.css'),
     'title' => 'Admin - Create Car',
     // 'pagename' => 'Izveidot Mašīnu'
 ])

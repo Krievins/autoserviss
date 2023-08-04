@@ -20,7 +20,7 @@ class CreatecarController extends Controller
 
     public function view ($id) {
 
-        $data = Car::findOrFail($id);;
+        $data = Car::findOrFail($id);
 
         return view('admin.Controllers.Cars.view_car', ['cars'=> $data]);
 
@@ -28,7 +28,7 @@ class CreatecarController extends Controller
 
     public function edit ($id) {
 
-        $data = Car::findOrFail($id);;
+        $data = Car::findOrFail($id);
 
         return view('admin.Controllers.Cars.edit_cars', ['cars'=> $data]);
 
@@ -76,7 +76,8 @@ class CreatecarController extends Controller
 
 
     return response()->json(['success' => 'Automašīna veiksmīgi tika pievienota.']);
-}
+
+    }
 
     public function show_cars () {
 

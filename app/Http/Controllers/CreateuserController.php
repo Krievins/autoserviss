@@ -13,28 +13,43 @@ class CreateuserController extends Controller
 
         $categories = Category::all();
 
-        return view('admin.Controllers.create_user', ['categories'=>$categories]);
+        return view('admin.Controllers.Users.create_user', ['categories'=>$categories]);
 
     }
 
     public function all_users () {
         
-        $data = User::paginate(10);
+        $data = User::paginate(4);
 
-        return view('admin.Controllers.users', ['members'=>$data]);
+        return view('admin.Controllers.Users.users', ['members'=>$data]);
+
+    }
+
+    public function view ($id) {
+
+        $data = User::findOrFail($id);
+
+        return view('admin.Controllers.Users.view_user', ['user'=> $data]);
+
+    }
+
+    public function edit ($id) {
+
+        $data = User::findOrFail($id);
+
+        return view('admin.Controllers.Users.edit_user', ['cars'=> $data]);
 
     }
 
     public function insert_user () {
 
-     
         $attributes = request()->validate([
             'name' => ['required', 'max:255'],
             'surname' => ['required', 'max:255'],
             'email' => ['required', 'max:255'],
             'phone' => ['required'],
             'username' => ['required', 'max:255'],
-            'password' => ['required', 'max:255'],
+            'password' => ['required', "min:8", 'max:255'],
         ]);
 
        
@@ -44,7 +59,7 @@ class CreateuserController extends Controller
  
         // $message = $client->message()->send([
         //     'to' => '371' . $attributes['phone'],
-        //     'from' => 'Digitifull',
+        //     'from' => 'Autool,
         //     'text' => 'Hey, ' . $attributes['name'] . 
         //     'Piekļuve tavam profilam:
             

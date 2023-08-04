@@ -4,8 +4,8 @@
     // 'pagename' => 'Izveidot Mašīnu'
 ])
 
-@section('content')
 
+@section('content')
     <div class="view">
         <div class="view__box">
             <h1 class="view__box--heading">Info Pārskats Par - {{ $cars['number_plate'] }}</h1>
